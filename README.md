@@ -3,8 +3,11 @@
 ## Contact
 Script & attempt at creating an icon by:  
 Chad Stovern  
-<chadhs@digitalnomad.im>  
-<http://www.digitalnomad.im>
+twitter: @chadhs  
+mail: <chadhs@digitalnomad.im>  
+blog: <http://www.digitalnomad.im>
+
+If you need help please drop me a line on via email or on twitter.  Watch this page for updates.  :-)
 
 ## Summary
 
