@@ -3,7 +3,7 @@
 ## Contact
 Script & attempt at creating an icon by:  
 Chad Stovern  
-twitter: @chadhs  
+twitter: [@chadhs](https://twitter.com/chadhs "Twitter")  
 mail: <chadhs@digitalnomad.im>  
 blog: <http://www.digitalnomad.im>
 
