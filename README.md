@@ -14,7 +14,9 @@ This workflow uses the iDoneThis API to quickly send updates to your [iDoneThis.
 
 ## Installation
 
-- Simply download and double–click the workflow file to install.
+- Click the "Download ZIP" button on the right side of this page
+- Unpack the ZIP file
+- In the unpacked folder double–click the workflow file to install it
 - Double-click the bash script in the workflow to edit it
 - Enter your api_token ( go here: https://idonethis.com/api/token/ , to get your token.  Keep it secret, keep it safe.)
 - Enter your team_short_name ( go here: https://idonethis.com/home/ , then click on either the personal or team link you want to send your "dones" to. grab the value after "cal“ in the url; /cal/\<team_short_name\>/ ).
