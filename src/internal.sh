@@ -30,7 +30,7 @@ IFS="
 
 ## static values
 done_date=`date '+%Y-%m-%d'`
-base_uri="https://idonethis.com/api/v0.0"
+base_uri="https://idonethis.com/api/v0.1"
 tmp_file="/tmp/done.json"
 done="{query}"
 ### let's replace single and double quotes with unicode values so we can include them easily in the done
