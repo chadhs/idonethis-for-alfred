@@ -29,8 +29,9 @@ IFS="
 
 
 ## static values
+api_version="v0.1"
 done_date=`date '+%Y-%m-%d'`
-base_uri="https://idonethis.com/api/v0.0"
+base_uri="https://idonethis.com/api/${api_version}"
 tmp_file="/tmp/done.json"
 done="{query}"
 ### let's replace single and double quotes with unicode values so we can include them easily in the done
@@ -43,9 +44,17 @@ done="${done//\"/\\u0022}"
 cat > $tmp_file << DONE
 {"team": "${base_uri}/teams/${team_short_name}/", "raw_text": "${done}", "done_date": "${done_date}"}
 DONE
-### submit done to api
-curl -H "Content-type:application/json" -H "Authorization: Token ${api_token}" --data @${tmp_file} ${base_uri}/dones/
+### submit done to api saving the return response
+res=$(curl -H "Content-type:application/json" -H "Authorization: Token ${api_token}" --data @${tmp_file} ${base_uri}/dones/)
 
+## if it was successful print out success message
+## if the request failed, print it
+if [[ $res == *"\"ok\": true"* ]]
+then
+    echo \"{query}\" has been posted.
+else
+    echo $res
+fi
 
 ## a bit of cleanup
 IFS=$oIFS
