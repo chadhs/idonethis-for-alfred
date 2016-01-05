@@ -22,7 +22,7 @@ This workflow uses the iDoneThis API to quickly send updates to your [iDoneThis.
 
 - Script & attempt at creating an icon by: Chad Stovern
 - twitter: [@chadhs](https://twitter.com/chadhs)
-- mail: <helpme@chadstovern.com>
+- mail: <help@chadstovern.com>
 - blog: <http://www.chadstovern.com>
 
 If you need help please drop me a line via email or on twitter. Watch this page for updates. :-)
