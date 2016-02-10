@@ -45,7 +45,7 @@ cat > $tmp_file << DONE
 {"team": "${base_uri}/teams/${team_short_name}/", "raw_text": "${done}", "done_date": "${done_date}"}
 DONE
 ### submit done to api saving the return response
-res=$(curl -H "Content-type:application/json" -H "Authorization: Token ${api_token}" --data @${tmp_file} ${base_uri}/dones/)
+res=$(curl -s -H "Content-type:application/json" -H "Authorization: Token ${api_token}" --data @${tmp_file} ${base_uri}/dones/)
 
 ## if it was successful print out success message
 ## if the request failed, print it
