@@ -53,10 +53,10 @@ post_success=`echo ${post_result} | grep created`
 ## if the request failed, print it, along with an error message
 if [[ -n $post_success ]]
 then
-    echo ${done} has been posted.
+    echo \"{query}\" has been posted.
 else
     echo $post_result
-    echo RUH ROH! ${done} did not post.
+    echo RUH ROH! \"{query}\" did not post.
 fi
 
 ## a bit of cleanup
