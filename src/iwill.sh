@@ -37,6 +37,7 @@ done="[] {query}"
 ### let's replace single and double quotes with unicode values so we can include them easily in the done
 done="${done//\'/\\u0027}"
 done="${done//\"/\\u0022}"
+done="${done//\`/\\u0060}"
 
 
 ## add done
