@@ -1,7 +1,7 @@
 # iDoneThis for Alfred
 ## instructions here: https://github.com/chadhs/idonethis-for-alfred
 ## need help? drop me a line.
-## chadhs@digitalnomad.im or @chadhs
+## hello@chadstovern.com or @chadhs
 
 
 ## enter your api token between the quotes below
@@ -37,6 +37,7 @@ done="[] {query}"
 ### let's replace single and double quotes with unicode values so we can include them easily in the done
 done="${done//\'/\\u0027}"
 done="${done//\"/\\u0022}"
+done="${done//\`/\\u0060}"
 
 
 ## add done
@@ -45,15 +46,17 @@ cat > $tmp_file << DONE
 {"team": "${base_uri}/teams/${team_short_name}/", "raw_text": "${done}", "done_date": "${done_date}"}
 DONE
 ### submit done to api saving the return response
-res=$(curl -s -H "Content-type:application/json" -H "Authorization: Token ${api_token}" --data @${tmp_file} ${base_uri}/dones/)
+post_result=$(curl -s -H "Content-type:application/json" -H "Authorization: Token ${api_token}" --data @${tmp_file} ${base_uri}/dones/)
+post_success=`echo ${post_result} | grep created`
 
 ## if it was successful print out success message
-## if the request failed, print it
-if [[ $res == *"\"ok\": true"* ]]
+## if the request failed, print it, along with an error message
+if [[ -n $post_success ]]
 then
     echo \"{query}\" has been posted.
 else
-    echo $res
+    echo $post_result
+    echo RUH ROH! \"{query}\" did not post.
 fi
 
 ## a bit of cleanup
