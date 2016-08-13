@@ -18,7 +18,7 @@ This workflow uses the iDoneThis API to quickly send updates to your [iDoneThis.
 - In the workflows section of Alfred select the `I Done This` workflow
 - Double-click the `bash scripts` in the `workflow` to edit it.
 - Enter your `api_token` - Contact support@idonethis.com to get your token, url to grab it yourself coming very soon. **Keep it secret, keep it safe.**
-- Enter your `team_id` - To get your `team_id` Login to https://beta.idonethis.com, then click on either the personal or team log you want to send your `dones`, `goals`, and `blockers` to. Grab the value after `t` in the url: `/t/\<team_id\>/`.
+- Enter your `team_id` - To get your `team_id` Login to https://beta.idonethis.com, then click on either the personal or team log you want to send your `dones`, `goals`, and `blockers` to. Grab the value after `t` in the url: `/t/<team_id>/`.
 
 ### iDoneThis 1.0 and Alfred 2 or 3
 
@@ -27,7 +27,7 @@ This workflow uses the iDoneThis API to quickly send updates to your [iDoneThis.
 - In the workflows section of Alfred select the `iDoneThis` workflow
 - Double-click both `bash scripts` in the `workflow` to edit them; repeat the next two steps for each script.
 - Enter your `api\token` - Go here: https://idonethis.com/api/token/, to get your token. **Keep it secret, keep it safe.**
-- Enter your `team\short-name` - Go here: https://idonethis.com/home/, then click on either the personal or team link you want to send your `dones` and `goals` to. Grab the value after `cal` in the url: `/cal/\<team short name\>/`.
+- Enter your `team\short-name` - Go here: https://idonethis.com/home/, then click on either the personal or team link you want to send your `dones` and `goals` to. Grab the value after `cal` in the url: `/cal/<team short name>/`.
 
 ## How to use
 
