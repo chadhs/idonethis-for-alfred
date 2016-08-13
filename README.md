@@ -43,7 +43,7 @@ This workflow uses the iDoneThis API to quickly send updates to your [iDoneThis.
 
 ## Contact
 
-- Script & and v1 icon by: Chad Stovern
+- Workflow and version 1 icon by: Chad Stovern (version 2 icon is the official I Done This logo used with permission)
 - twitter: [@chadhs](https://twitter.com/chadhs)
 - mail: <help@chadstovern.com>
 - blog: <http://www.chadstovern.com>
