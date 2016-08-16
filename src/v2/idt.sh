@@ -40,7 +40,8 @@ done="${done//\`/\\u0060}"
 cat > $tmp_file << DONE
 {
     "body": "${done}",
-    "team_id": "${team_id}"
+    "team_id": "${team_id}",
+    "occurred_on": "${done_date}"
 }
 DONE
 ### submit done to api saving the return response
