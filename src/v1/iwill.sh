@@ -23,11 +23,6 @@ team_short_name=""
 ###################################
 
 
-oIFS=$IFS
-IFS="
-"
-
-
 ## static values
 api_version="v0.1"
 done_date=`date '+%Y-%m-%d'`
@@ -60,5 +55,4 @@ else
 fi
 
 ## a bit of cleanup
-IFS=$oIFS
 rm $tmp_file

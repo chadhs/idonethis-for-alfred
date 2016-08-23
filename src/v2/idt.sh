@@ -17,12 +17,6 @@ team_id=""
 ######### HERE BE DRAGONS #########
 ###################################
 
-
-oIFS=$IFS
-IFS="
-"
-
-
 ## static values
 api_version="v2"
 done_date=`date '+%Y-%m-%d'`
@@ -59,5 +53,4 @@ else
 fi
 
 ## a bit of cleanup
-IFS=$oIFS
 rm $tmp_file
