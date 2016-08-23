@@ -21,7 +21,6 @@ team_id=""
 api_version="v2"
 done_date=$(date '+%Y-%m-%d')
 base_uri="https://beta.idonethis.com/api/${api_version}"
-tmp_file="/tmp/idt.json"
 done="{query}"
 ### let's replace single quotes, double quotes, and backticks with unicode values so we can include them easily in the done
 done="${done//\'/\\u0027}"
@@ -30,16 +29,11 @@ done="${done//\`/\\u0060}"
 
 
 ## add done
-### create json temp file
-cat > $tmp_file << DONE
-{
-    "body": "${done}",
-    "team_id": "${team_id}",
-    "occurred_on": "${done_date}"
-}
-DONE
 ### submit done to api saving the return response
-post_result=$(curl -s -H "Content-type:application/json" -H "Authorization: Token ${api_token}" --data @${tmp_file} ${base_uri}/entries)
+post_result=$(curl -sS -X "POST" "${base_uri}/entries" \
+    -H "Authorization: Token ${api_token}" \
+    -H "Content-Type: application/json; charset=utf-8" \
+    -d "{\"body\":\"${done}\",\"team_id\":\"${team_id}\",\"occurred_on\":\"${done_date}\"}")
 post_success=$(echo ${post_result} | grep created_at)
 
 ## if it was successful print out success message
@@ -51,6 +45,3 @@ else
     echo $post_result
     echo RUH ROH! \"{query}\" did not post.
 fi
-
-## a bit of cleanup
-rm $tmp_file

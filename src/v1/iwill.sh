@@ -27,7 +27,6 @@ team_short_name=""
 api_version="v0.1"
 done_date=$(date '+%Y-%m-%d')
 base_uri="https://idonethis.com/api/${api_version}"
-tmp_file="/tmp/done.json"
 done="[] {query}"
 ### let's replace single and double quotes with unicode values so we can include them easily in the done
 done="${done//\'/\\u0027}"
@@ -36,13 +35,11 @@ done="${done//\`/\\u0060}"
 
 
 ## add done
-### create json temp file
-cat > $tmp_file << DONE
-{"team": "${base_uri}/teams/${team_short_name}/", "raw_text": "${done}", "done_date": "${done_date}"}
-DONE
 ### submit done to api saving the return response
-post_result=$(curl -s -H "Content-type:application/json" -H "Authorization: Token ${api_token}" --data @${tmp_file} ${base_uri}/dones/)
-post_success=`echo ${post_result} | grep created`
+post_result=$(curl -s -X "POST" "${base_uri}/dones/" \
+    -H "Authorization: Token ${api_token}" \
+    -H "Content-Type: application/json; charset=utf-8" \
+    -d "{\"team\":\"${base_uri}/teams/${team_short_name}/\",\"raw_text\":\"${done}\",\"done_date\":\"${done_date}\"}")
 post_success=$(echo ${post_result} | grep created)
 
 ## if it was successful print out success message
@@ -54,6 +51,3 @@ else
     echo $post_result
     echo RUH ROH! \"{query}\" did not post.
 fi
-
-## a bit of cleanup
-rm $tmp_file
