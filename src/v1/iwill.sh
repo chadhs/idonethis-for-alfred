@@ -25,7 +25,7 @@ team_short_name=""
 
 ## static values
 api_version="v0.1"
-done_date=`date '+%Y-%m-%d'`
+done_date=$(date '+%Y-%m-%d')
 base_uri="https://idonethis.com/api/${api_version}"
 tmp_file="/tmp/done.json"
 done="[] {query}"
@@ -43,6 +43,7 @@ DONE
 ### submit done to api saving the return response
 post_result=$(curl -s -H "Content-type:application/json" -H "Authorization: Token ${api_token}" --data @${tmp_file} ${base_uri}/dones/)
 post_success=`echo ${post_result} | grep created`
+post_success=$(echo ${post_result} | grep created)
 
 ## if it was successful print out success message
 ## if the request failed, print it, along with an error message

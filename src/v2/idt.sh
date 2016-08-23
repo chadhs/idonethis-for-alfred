@@ -19,7 +19,7 @@ team_id=""
 
 ## static values
 api_version="v2"
-done_date=`date '+%Y-%m-%d'`
+done_date=$(date '+%Y-%m-%d')
 base_uri="https://beta.idonethis.com/api/${api_version}"
 tmp_file="/tmp/idt.json"
 done="{query}"
@@ -40,7 +40,7 @@ cat > $tmp_file << DONE
 DONE
 ### submit done to api saving the return response
 post_result=$(curl -s -H "Content-type:application/json" -H "Authorization: Token ${api_token}" --data @${tmp_file} ${base_uri}/entries)
-post_success=`echo ${post_result} | grep created_at`
+post_success=$(echo ${post_result} | grep created_at)
 
 ## if it was successful print out success message
 ## if the request failed, print it, along with an error message
