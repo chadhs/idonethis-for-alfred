@@ -41,6 +41,9 @@ This workflow uses the I Done This API to quickly send updates to your [idonethi
 - Type `idt` followed by your update and press `Enter`; you're done!
 - Just like responding via email you can enter goals by starting your update with a `[]` and blockers by starting your update with a `!`.
 
+- Type `idtlist` to see your incomplete goals
+- Choose the goal you want to mark as done
+
 ### I Done This 1.0 and Alfred 2 or 3
 
 - Type `idid` followed by your **done** and press `Enter`; you're done!
