@@ -55,6 +55,7 @@ If you need help please drop me a line via email or on twitter. Watch this page 
 Be sure to thank the fine folks who've contributed improvements to I Done This for Alfred!
 
 - [chadhs](https://github.com/chadhs)
+- [jeffbyrnes](https://github.com/jeffbyrnes)
 - [laythun](https://github.com/laythun)
 - [ladislas](https://github.com/ladislas)
 
