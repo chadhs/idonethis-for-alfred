@@ -16,9 +16,14 @@ This workflow uses the I Done This API to quickly send updates to your [idonethi
 - In the unpacked folder navigate to `workflows/idonethis-v2`
 - Double–click the `idonethis2-for-alfred3.alfredworkflow` file to install it
 - In the workflows section of Alfred select the `I Done This` workflow
-- Double-click the `bash scripts` in the `workflow` to edit it.
-- Enter your `api_token` - Follow these instructions to obtain your API token: http://help.idonethis.com/article/139-obtaining-your-api-token **Keep it secret, keep it safe.**
-- Enter your `team_id` - To get your `team_id` Login to https://beta.idonethis.com, then click on either the personal or team log you want to send your `dones`, `goals`, and `blockers` to. Grab the value after `t` in the url: `/t/<team_id>/`.
+- Click the `[x]` icon in the top-right of the workflow to edit it.
+- Enter your `api_token`
+    Follow these instructions to obtain your API token: http://help.idonethis.com/article/139-obtaining-your-api-token **Keep it secret, keep it safe.**
+- Enter your `team_id`
+    - To get your `team_id`:
+        1. Login to https://beta.idonethis.com
+        2. Click on either the personal or team log you want to send your `dones`, `goals`, and `blockers` to.
+        3. Grab the value after `t` in the url: `/t/<team_id>/`.
 
 ### I Done This 1.0 and Alfred 2 or 3
 
@@ -35,6 +40,9 @@ This workflow uses the I Done This API to quickly send updates to your [idonethi
 
 - Type `idt` followed by your update and press `Enter`; you're done!
 - Just like responding via email you can enter goals by starting your update with a `[]` and blockers by starting your update with a `!`.
+
+- Type `idtlist` to see your incomplete goals
+- Choose the goal you want to mark as done
 
 ### I Done This 1.0 and Alfred 2 or 3
 
