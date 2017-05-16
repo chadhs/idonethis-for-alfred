@@ -3,15 +3,6 @@
 ## need help? drop me a line.
 ## hello@chadstovern.com or @chadhs
 
-
-## enter your api token between the double quotes below
-api_token=""
-
-
-## enter your team_id between the double quotes below
-team_id=""
-
-
 ###################################
 ### DO NOT EDIT BELOW THIS LINE ###
 ######### HERE BE DRAGONS #########
