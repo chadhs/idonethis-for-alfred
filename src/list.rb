@@ -131,7 +131,7 @@ print begin
   list_cache = cache.get 'list'
 
   if list_cache.nil?
-    uri = URI "#{base_uri}/teams/#{team_id}/entries"
+    uri = URI "#{base_uri}/entries"
 
     # Create client
     http             = Net::HTTP.new uri.host, uri.port
