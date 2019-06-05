@@ -12,7 +12,7 @@ require 'date'
 done_date   = Date.today.strftime '%Y-%m-%d'
 api_token   = ENV['api_token']
 api_version = 'v2'
-base_uri    = "https://beta.idonethis.com/api/#{api_version}"
+base_uri    = "https://app.idonethis.com/api/#{api_version}"
 
 ## Update your goal to done
 begin

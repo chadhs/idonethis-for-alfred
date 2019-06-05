@@ -11,7 +11,7 @@
 ## static values
 api_version="v2"
 done_date=$(date '+%Y-%m-%d')
-base_uri="https://beta.idonethis.com/api/${api_version}"
+base_uri="https://app.idonethis.com/api/${api_version}"
 done="{query}"
 ### let's replace single quotes, double quotes, and backticks with unicode values so we can include them easily in the done
 done="${done//\'/\\u0027}"
