@@ -122,7 +122,7 @@ end
 api_token   = ENV['api_token']
 team_id     = ENV['team_id']
 api_version = 'v2'
-base_uri    = "https://beta.idonethis.com/api/#{api_version}"
+base_uri    = "https://app.idonethis.com/api/#{api_version}"
 
 ## get & output the list of entries
 print begin
